@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAWAEID | المقدمة</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/introduction.css' %}" />
+  </head>
+  <body>
+     <!-- Navbar -->
+  <nav>
+  <ul class="navbar">
+    <li class="dropdown">
+      <a href="#">About</a>
+      <ul class="dropdown-content">
+        <li><a href="{% url 'introduction' %}">مقدمة | Introduction</a></li>
+        <li><a href="{% url 'whyus' %}">لماذا نحن؟ | Why Us?</a></li>
+        <li><a href="{% url 'message' %}">رسالتنا | Our Message</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">Team & Services</a>
+      <ul class="dropdown-content">
+        <li><a href="{% url 'team' %}">تعرف على فريقنا | Our Team</a></li>
+        <li><a href="{% url 'services' %}">خدماتنا | Our Services</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">Projects</a>
+      <ul class="dropdown-content">
+        <li><a href="{% url 'whatwedo' %}">ماذا نفعل؟ | What We Do</a></li>
+        <li><a href="{% url 'project' %}">مشاريعنا | Our Projects</a></li>
+        <li><a href="{% url 'case' %}">دراسة حالة المشاريع | Case Study</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">Vision & Contact</a>
+      <ul class="dropdown-content">
+        <li><a href="{% url 'vision' %}">رؤيتنا | Our Vision</a></li>
+        <li><a href="{% url 'strategy' %}">الحشد والاستراتيجية | Strategy</a></li>
+        <li><a href="{% url 'contact' %}">رسالة شكر | Thank You</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <!-- Decorative Shapes Layer -->
+    <div class="shape-layer">
+      <div class="decor-shape circle1"></div>
+      <div class="decor-shape block1"></div>
+      <div class="decor-shape circle2"></div>
+      <div class="decor-shape block2"></div>
+      <div class="decor-shape bell-icon"><i class="fas fa-bell-concierge"></i></div>
+      <div class="decor-shape bed-icon"><i class="fas fa-bed"></i></div>
+    </div>
+
+    <!-- Logo -->
+    <header class="content-header scroll-animate">
+      <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo animate-logo" />
+    </header>
+
+    <!-- Main Content -->
+    <main class="content-section scroll-animate">
+      <div class="content-box">
+        <h2 class="section-title floating-icon-wrapper">
+          المقدمة | Introduction
+          <i class="fas fa-book-open floating-icon"></i>
+        </h2>
+
+        <p>
+          SAWAEID شركة رائدة في مجال توريد العمالة المدربة في قطاع الضيافة الفندقية.
+          نحن متخصصون في تقديم عمالة عالية الجودة ومدربة لجميع أقسام الفنادق،
+          سواء كانت فنادق صغيرة أو منشآت فاخرة.
+        </p>
+
+        <p>
+          We are experts in supplying high-quality and well-trained staff for
+          all hotel departments, whether for small hotels or luxurious
+          establishments.
+        </p>
+
+        <p>
+          نقدم حلولاً مرنة لتلبية احتياجات العملاء مع ضمان تقديم تجربة استثنائية للضيوف.
+        </p>
+
+        <p>
+          We offer flexible staffing solutions tailored to meet our clients’ needs while ensuring an exceptional guest experience.
+        </p>
+
+        <hr class="divider" />
+
+        <h3 class="section-subtitle floating-icon-wrapper">
+          مجلس الإدارة | Board of Directors
+          <i class="fas fa-user-tie floating-icon"></i>
+        </h3>
+
+        <ul class="info-list">
+          <li>رئيس مجلس الإدارة: عبد الرحمن منصور أحمد دمنهوري</li>
+          <li>Chairman of the Board: Mr. Ahmed Mansour Abdulrahman Damanhouri</li>
+        </ul>
+
+        <div class="chairman-block scroll-animate">
+          <img src="{% static 'images/man.png' %}" alt="Chairman" class="chairman-img" />
+          <blockquote>
+            <p>
+              الإدارة ليست مجرد اتخاذ قرارات، بل هي فن تحفيز فريق العمل ليصل إلى أقصى إمكاناته.
+              القائد الناجح هو الذي يحول التحديات إلى فرص، ويجعل من التنوع مصدرًا للقوة،
+              ومن الإنجازات حكايات ملهمة تروى عبر الزمن.
+            </p>
+            <p>
+              Management is not merely about making decisions; it is the art of inspiring a team
+              to reach its full potential. A successful leader transforms challenges into opportunities,
+              diversity into a source of strength, and achievements into inspiring stories that endure through time.
+            </p>
+          </blockquote>
+        </div>
+
+        <hr class="divider" />
+
+        <h3 class="section-subtitle floating-icon-wrapper">
+          معلومات التواصل | Contact Info
+          <i class="fas fa-address-book floating-icon"></i>
+        </h3>
+
+        <ul class="info-list">
+          <li><i class="fas fa-phone"></i> +966504504283</li>
+          <li><i class="fas fa-envelope"></i> sawaeidhospitality@gmail.com</li>
+          <li><i class="fas fa-globe"></i> www.sawaeid-sa.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> مكة، 24232، المملكة العربية السعودية</li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="scroll-animate">
+      <p><i class="fas fa-phone"></i> +966504504283</p>
+      <p><i class="fas fa-envelope"></i> sawaeidhospitality@gmail.com</p>
+      <p><i class="fas fa-globe"></i> www.sawaeid-sa.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> مكة، 24232، المملكة العربية السعودية</p>
+    </footer>
+
+    <!-- Scroll Down Button -->
+    <a href="#bottom" class="scroll-down-btn"><i class="fas fa-angle-down"></i></a>
+    <span id="bottom"></span>
+
+    <!-- JS -->
+    <script src="{% static 'js/content.js' %}"></script>
+  </body>
+</html>

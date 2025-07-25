@@ -1,0 +1,248 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  color: #000;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+}
+
+/* Blurred background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('/static/images/logo1.jpg') center center / cover no-repeat;
+  filter: blur(1.2px);
+  z-index: -2;
+}
+
+/* Optional dark overlay */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  position: relative;
+  text-align: right;
+}
+
+/* Welcome container */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 50px;
+  transform: translateX(10%);
+  position: relative;
+  z-index: 2;
+}
+
+/* Welcome lines */
+.welcome-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+  opacity: 0;
+}
+
+.welcome-ar,
+.welcome-en {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #111;
+}
+
+.sawaeid-ar,
+.sawaeid-en {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #1b4e46;
+  opacity: 0;
+}
+
+.sawaeid-ar:hover,
+.sawaeid-en:hover,
+.welcome-ar:hover,
+.welcome-en:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+.get-started-btn {
+  margin-top: 30px;
+  padding: 15px 25px;
+  background-color: #2a9d8f;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.4s ease;
+  text-decoration: none;
+  display: inline-block;
+  animation-delay: 2s;
+}
+
+.flashy-button {
+  animation: pulse 1.5s ease-in-out 2;
+  opacity: 1 !important;
+}
+
+.get-started-btn:hover {
+  background-color: #1b7766;
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 rgba(42,157,143, 0.7); }
+  50% { transform: scale(1.1); box-shadow: 0 0 20px rgba(42,157,143, 0.9); }
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(42,157,143, 0.7); }
+}
+
+/* Footer */
+footer {
+  background-color: rgba(27, 89, 54, 0.9);
+  padding: 25px 20px;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.95rem;
+  animation: floatFooter 4s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
+}
+
+footer p {
+  margin: 6px 0;
+}
+
+footer i {
+  margin-left: 6px;
+  color: #fff;
+}
+
+@keyframes floatFooter {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Back to Top */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 9999;
+}
+
+#backToTop:hover {
+  background-color: #1b7766;
+  transform: scale(1.1);
+}
+
+/* Scroll Animation */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom animations */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* JS animation classes */
+.slide-in-left {
+  animation: slideInLeft 0.9s ease forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.9s ease forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Fade transition for full page */
+body {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+body.fade-out {
+  opacity: 0;
+}

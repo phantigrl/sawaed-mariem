@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>SAWAEID | Welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+  <div class="hero scroll-animate">
+    <div class="welcome-container">
+      <div class="welcome-line arabic">
+        <span class="welcome-ar">اهلا بكم في</span>
+        <h1 class="sawaeid-ar">سواعد</h1>
+      </div>
+      <div class="welcome-line english" dir="ltr">
+        <span class="welcome-en">Welcome to</span>
+        <h1 class="sawaeid-en">SAWAEID</h1>
+      </div>
+    </div>
+    <a href="{% url 'content' %}" class="get-started-btn">Get Started | ابدأ الآن</a>
+  </div>
+
+  <footer class="scroll-animate">
+    <p><i class="fas fa-phone"></i> +966504504283</p>
+    <p><i class="fas fa-envelope"></i> sawaeidhospitality@gmail.com</p>
+    <p><i class="fas fa-globe"></i> www.sawaeid-sa.com</p>
+    <p><i class="fas fa-map-marker-alt"></i> Makkah, 24232, Saudi Arabia</p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top"><i class="fas fa-square-up-right"></i></button>
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

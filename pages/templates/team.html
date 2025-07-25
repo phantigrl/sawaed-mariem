@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAWAEID | فريق العمل</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'css/team.css' %}" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <ul class="navbar">
+      <li class="dropdown">
+        <a href="#">About</a>
+        <ul class="dropdown-content">
+          <li><a href="{% url 'introduction' %}">مقدمة | Introduction</a></li>
+          <li><a href="{% url 'whyus' %}">لماذا نحن؟ | Why Us?</a></li>
+          <li><a href="{% url 'message' %}">رسالتنا | Our Message</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Team & Services</a>
+        <ul class="dropdown-content">
+          <li><a href="{% url 'team' %}">تعرف على فريقنا | Our Team</a></li>
+          <li><a href="{% url 'services' %}">خدماتنا | Our Services</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Projects</a>
+        <ul class="dropdown-content">
+          <li><a href="{% url 'whatwedo' %}">ماذا نفعل؟ | What We Do</a></li>
+          <li><a href="{% url 'project' %}">مشاريعنا | Our Projects</a></li>
+          <li><a href="{% url 'case' %}">دراسة حالة المشاريع | Case Study</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Vision & Contact</a>
+        <ul class="dropdown-content">
+          <li><a href="{% url 'vision' %}">رؤيتنا | Our Vision</a></li>
+          <li><a href="{% url 'strategy' %}">الحشد والاستراتيجية | Strategy</a></li>
+          <li><a href="{% url 'contact' %}">رسالة شكر | Thank You</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div class="shape-layer">
+    <div class="shape circle"></div>
+    <div class="shape square"></div>
+    <div class="shape triangle"></div>
+  </div>
+
+  <div class="content-wrapper">
+    <h1 class="page-title scroll-animate">
+      <span class="line">تعرف على</span>
+      <span class="line">فريقنا</span>
+      <span class="line en">Our Team</span>
+    </h1>
+
+    <main class="team-container">
+      <div class="team-bubble scroll-animate">
+        <i class="fas fa-user-tie icon"></i>
+        <h2>أ. عبداللٰه عبد الرحمن مغربي</h2>
+        <h3>نائب رئيس مجلس الادارة ومدير عام الشركة<br>General Manager</h3>
+        <p>
+          <span class="ar">المسؤول عن قيادة جميع عمليات الشركة وضمان الجودة في توفير العمالة المدربة لجميع عملائنا.</span><br>
+          <span class="en">Responsible for leading all company operations and ensuring quality in providing trained labor to all our clients.</span>
+        </p>
+      </div>
+
+      <div class="team-bubble scroll-animate">
+        <i class="fas fa-people-group icon"></i>
+        <h2>فريق الموارد البشرية</h2>
+        <h3>Human Resources Team</h3>
+        <p>
+          <span class="ar">يحرص فريق الموارد البشرية لدينا على تحديد واختيار الموظفين ذوي الكفاءة العالية وتقديم برامج تدريب مستمرة لتعزيز مهاراتهم بما يتناسب مع معايبر الصناعة الفندقية.</span><br>
+          <span class="en">Our Human Resources team is dedicated to identifying and selecting highly qualified employees, while offering continuous training programs to enhance their skills in alignment with the standards of the hospitality industry.</span>
+        </p>
+      </div>
+
+      <div class="team-bubble scroll-animate">
+        <i class="fas fa-chalkboard-teacher icon"></i>
+        <h2>فريق التدريب والتطوير</h2>
+        <h3>Training & Development Team</h3>
+        <p>
+          <span class="ar">يشرف على تدريب العمالة في جميع الأقسام الفندقية من خدمات الاستقبال إلى التنظيف وصيانة الغرف لضمان تقديم خدمة عالية الجودة.</span><br>
+          <span class="en">The Training and Development Team oversees the training of staff across all hotel departments, from reception services to cleaning and room maintenance, ensuring the delivery of high-quality service.</span>
+        </p>
+      </div>
+
+      <div class="team-bubble scroll-animate">
+        <i class="fas fa-sitemap icon"></i>
+        <h2>فريق العمليات</h2>
+        <h3>Operations Team</h3>
+        <p>
+          <span class="ar">يختص فريق العمليات بتنظيم وتوزيع المهام بين العمالة، والتأكد من سير العمل بشكل فعال ومنظم لتلبية احتياجات العملاء.</span><br>
+          <span class="en">The Operations Team is responsible for organizing and distributing tasks among the staff, ensuring that work flows efficiently and in an organized manner to meet the clients' needs.</span>
+        </p>
+      </div>
+    </main>
+
+    <footer class="footer scroll-animate">
+      <p><i class="fas fa-phone"></i> +966504504283</p>
+      <p><i class="fas fa-envelope"></i> sawaeidhospitality@gmail.com</p>
+      <p><i class="fas fa-globe"></i> www.sawaeid-sa.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> مكة، السعودية</p>
+    </footer>
+  </div>
+
+  <script src="{% static 'js/team.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>SAWAEID | Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+</head>
+<body>
+
+  
+  <!-- Navbar -->
+  <nav>
+  <ul class="navbar">
+    <li class="dropdown">
+      <a href="#">About</a>
+      <ul class="dropdown-content">
+        <li><a href="{% url 'introduction' %}">مقدمة | Introduction</a></li>
+        <li><a href="{% url 'whyus' %}">لماذا نحن؟ | Why Us?</a></li>
+        <li><a href="{% url 'message' %}">رسالتنا | Our Message</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">Team & Services</a>
+      <ul class="dropdown-content">
+        <li><a href="{% url 'team' %}">تعرف على فريقنا | Our Team</a></li>
+        <li><a href="{% url 'services' %}">خدماتنا | Our Services</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">Projects</a>
+      <ul class="dropdown-content">
+        <li><a href="{% url 'whatwedo' %}">ماذا نفعل؟ | What We Do</a></li>
+        <li><a href="{% url 'project' %}">مشاريعنا | Our Projects</a></li>
+        <li><a href="{% url 'case' %}">دراسة حالة المشاريع | Case Study</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">Vision & Contact</a>
+      <ul class="dropdown-content">
+        <li><a href="{% url 'vision' %}">رؤيتنا | Our Vision</a></li>
+        <li><a href="{% url 'strategy' %}">الحشد والاستراتيجية | Strategy</a></li>
+        <li><a href="{% url 'contact' %}">رسالة شكر | Thank You</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  <!-- Thanks Section -->
+  <section id="thanks-section" class="blur-bg scroll-animate delay-1">
+    <h2 class="section-title animated-text center"><i class="fas fa-handshake"></i> رسالة شكر | Thanks</h2>
+
+    <div class="dual-wrapper">
+
+      <!-- Arabic Message Bubble -->
+      <div class="bubble bubble-right hover-card scroll-animate delay-2">
+        <p class="section-text">
+          نود أن نعبر عن جزيل شكرنا لجميع عملائنا الكرام
+          على ثقتهم في خدماتنا. نحن نقدر كل لحظة من
+          التعاون معكم، ونتعهد بمواصلة تقديم أفضل
+          مستوى من الخدمة لضمان رضاكم التام. نسعى
+          دوماً للابتكار وتحقيق النجاح في جميع مشاريعنا المستقبلية.
+        </p>
+      </div>
+
+      <!-- English Message Bubble -->
+      <div class="bubble bubble-left hover-card scroll-animate delay-3">
+        <p class="section-text">
+          We would like to express our sincere gratitude to all our valued clients
+          for their trust in our services. We deeply appreciate every moment of
+          collaboration with you and pledge to continue providing the highest
+          level of service to ensure your complete satisfaction. We are always
+          striving for innovation and look forward to achieving success together
+          in all our future projects.
+        </p>
+      </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact-form" class="blur-bg scroll-animate delay-4">
+    <div class="wrapper">
+      <h2 class="section-title animated-text"><i class="fas fa-envelope"></i> أرسل رسالة | Send a Message</h2>
+      <form>
+        <input type="text" placeholder="الاسم | Name" required>
+        <input type="email" placeholder="البريد الإلكتروني | Email" required>
+        <textarea placeholder="رسالتك | Your Message" rows="4" required></textarea>
+        <button type="submit" class="btn">إرسال <i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Back To Top Button -->
+<button id="backToTop" title="Back to Top">
+  <i class="fas fa-square-up-right"></i>
+</button>
+
+    <div class="qr-container scroll-animate">
+  <img src="{% static 'images/Qr.png' %}" alt="qr" class="qr" />
+</div>
+
+  <!-- Footer Info -->
+  <footer>
+    <p><i class="fas fa-phone"></i> +966504504283</p>
+    <p><i class="fas fa-envelope"></i> sawaeidhospitality@gmail.com</p>
+    <p><i class="fas fa-globe"></i> www.sawaeid-sa.com</p>
+    <p><i class="fas fa-map-marker-alt"></i> Makkah, 24232, Saudi Arabia</p>
+    <p><i class="fas fa-id-badge"></i> السجل التجاري: 4030474104</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="{% static 'js/contact.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: rgba(46, 46, 46, 0.85);
+  color: #f0f0f0;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+/* Animated background */
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #403e41;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.background span {
+  position: absolute;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  pointer-events: none;
+  animation: move linear infinite;
+  filter: blur(1.2px);
+}
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+/* Logo */
+.logo {
+  width: 140px;
+  margin: 40px auto 20px;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+/* Content section */
+.content-section {
+  padding: 60px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+  min-height: calc(100vh - 200px);
+  width: 100%;
+}
+
+/* Box */
+.content-box {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 18px;
+  padding: 40px;
+  width: 90%;
+  max-width: 1100px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  z-index: 2;
+  position: relative;
+  direction: rtl;
+}
+
+/* Section title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #bcc397;
+  text-align: center;
+  width: 100%;
+}
+
+/* Link layout */
+.link-group {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Link block */
+.link-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+  min-width: 250px;
+  max-width: 450px;
+  flex: 1;
+}
+
+/* Heading */
+.link-heading {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #1b4e46;
+  background-color: #e4e4b5;
+  padding: 10px 18px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.link-heading i {
+  color: #1b4e46;
+  font-size: 1.2rem;
+}
+
+/* Links */
+.link-item {
+  background-color: #1b4e46;
+  padding: 10px 18px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  width: 100%;
+  position: relative;
+}
+
+.link-item:hover {
+  background-color: #256c60;
+  color: #e4e4b5;
+  transform: translateX(-3px);
+}
+
+.link-item::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  right: 16px;
+  width: calc(100% - 32px);
+  height: 1px;
+  background-color: #e4e4b5;
+  opacity: 0.3;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(27, 89, 54, 0.9);
+  padding: 25px 20px;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-top: 80px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+footer p {
+  margin: 6px 0;
+}
+
+footer i {
+  margin-left: 6px;
+  color: #fff;
+}
+
+/* Animations */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Logo blur wrapper */
+.logo-wrapper {
+  backdrop-filter: blur(4px);
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(64, 62, 65, 0.3);
+}
+
+/* Page transitions */
+body {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+body.fade-out {
+  opacity: 0;
+}

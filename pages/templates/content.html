@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAWAEID | Content</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'css/content.css' %}" />
+</head>
+<body class="fade-in">
+  <!-- Animated Background -->
+  <div class="background">
+    {% for _ in "12345678901234567890" %}
+    <span></span>
+    {% endfor %}
+  </div>
+
+  <!-- Header -->
+  <header class="content-header">
+    <div class="logo-wrapper">
+      <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo" />
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="content-section scroll-animate">
+    <div class="content-box">
+      <h2 class="section-title">المحتوى | Content</h2>
+
+      <div class="link-group">
+        <!-- Row 1 -->
+        <div class="link-row">
+          <div class="link-section">
+            <div class="link-heading">About</div>
+            <a href="{% url 'introduction' %}" class="link-item">مقدمة | Introduction</a>
+            <a href="{% url 'whyus' %}" class="link-item">لماذا نحن؟ | Why Us?</a>
+            <a href="{% url 'message' %}" class="link-item">رسالتنا | Our Message</a>
+          </div>
+
+          <div class="link-section">
+            <div class="link-heading">Team & Services</div>
+            <a href="{% url 'team' %}" class="link-item">تعرف على فريقنا | Our Team</a>
+            <a href="{% url 'services' %}" class="link-item">خدماتنا | Our Services</a>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="link-row">
+          <div class="link-section">
+            <div class="link-heading">Projects</div>
+            <a href="{% url 'whatwedo' %}" class="link-item">ماذا نفعل؟ | What We Do</a>
+            <a href="{% url 'project' %}" class="link-item">مشاريعنا | Our Projects</a>
+            <a href="{% url 'case' %}" class="link-item">دراسة حالة المشاريع | Case Study</a>
+          </div>
+
+          <div class="link-section">
+            <div class="link-heading">Vision & Contact</div>
+            <a href="{% url 'vision' %}" class="link-item">رؤيتنا | Our Vision</a>
+            <a href="{% url 'strategy' %}" class="link-item">الحشد والاستراتيجية | Strategy</a>
+            <a href="{% url 'contact' %}" class="link-item">رسالة شكر | Thank You</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="scroll-animate">
+    <p><i class="fas fa-phone"></i> +966504504283</p>
+    <p><i class="fas fa-envelope"></i> sawaeidhospitality@gmail.com</p>
+    <p><i class="fas fa-globe"></i> www.sawaeid-sa.com</p>
+    <p><i class="fas fa-map-marker-alt"></i> Makkah, 24232, Saudi Arabia</p>
+  </footer>
+
+  <script src="{% static 'js/content.js' %}"></script>
+</body>
+</html>
